@@ -1,0 +1,38 @@
+/* Structure */
+body {
+    font-family: Roboto, sans-serif;
+    background-color: #F2F2F2;
+    margin: auto;
+}
+
+#content-container {
+    padding: 1%;
+    width: 90%;
+    margin: auto;
+}
+
+h1 {
+    color: #324359;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+h2 {
+    color: #BF6517;
+    font-size: 1.8rem;
+}
+
+p {
+    color: #D98C4A;
+    font-size: 1.1rem;
+}
+
+.assignment-link {
+    color: #BFA380;
+    text-decoration: none;
+}
+
+#github-link {
+    color: #BFA380;
+    text-decoration: none;
+}
