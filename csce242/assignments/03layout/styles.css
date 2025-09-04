@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(242, 240, 216);
+    color: #333;
+    line-height: 1.6;
+}
+
+header, footer {
+    background-color: rgb(242, 240, 216);
+    color: rgb(102, 134, 139);
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+footer p {
+    font-size: 1.5rem;
+    background-color:rgb(205, 120, 132);
+    color: white;
+    padding: 1rem;
+}
+
+nav {
+    background-color: rgb(205, 120, 132);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    background-color: rgb(205, 120, 132);
+}
+
+.container {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+aside {
+    background-color: rgb(205, 120, 132);
+    color: white;
+    padding: 1rem;
+    width: 20%;
+    min-width: 150px;
+}
+
+aside h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside ul li a {
+    color: white;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+aside ul li a:hover, aside ul li a:focus {
+    background-color: rgb(205, 120, 132);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.idea {
+    display: flex;
+    gap: 20px;
+    padding: 1rem;
+    color: rgb(100, 134, 139);
+    flex: 0 1 45%;
+    min-width: 200px;
+    align-items: flex-start; 
+}
+
+.idea img {
+    max-width: 30%; 
+    height: auto;
+    object-fit: cover;
+}
+
+.idea-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1; 
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.gallery {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.title, .gallery-item {
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    flex: 1 1 18%;
+    min-width: 150px;
+}
+
+.gallery-item {
+    background-color: #a9beb8;
+}
+
+.title {
+    background-color: #66858b;
+}
+
+.title[div-id="title-1"], .title[div-id="title-2"],
+.gallery-item[div-id="gallery-1"], .gallery-item[div-id="gallery-2"], .gallery-item[div-id="gallery-3"] {
+    order: 1;
+}
+
+.title[div-id="title-3"], .title[div-id="title-4"],
+.gallery-item[div-id="gallery-4"], .gallery-item[div-id="gallery-5"], .gallery-item[div-id="gallery-6"] {
+    order: 2;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0.5rem auto;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .idea {
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+    }
+
+    .idea-content {
+        text-align: left;
+    }
+
+    .title img, .gallery-item img {
+        width: 100%; 
+        height: auto;
+        max-width: none;
+    }
+
+    .idea, .title, .gallery-item {
+        flex: 1 1 100%;
+    }
+}
