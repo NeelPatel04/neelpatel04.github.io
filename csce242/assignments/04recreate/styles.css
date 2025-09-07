@@ -1,0 +1,712 @@
+:root {
+    --garnet-color:rgb(107, 18, 17);
+    --black-color:rgb(0,0,0);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: var(--garnet-color);
+}
+
+/* Top navigation bar */
+.topbar {
+    background: var(--black-color);
+    color: white;
+    padding: 8.5px 0;
+    font-size: 12px;
+}
+
+.topbar .container {
+    max-width: 1200px;
+    margin: 0 0 0 30px;
+    padding: 0 50px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.top-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.top-links li:not(:last-child)::after {
+  content: "|";
+  margin: 0 10px;
+}
+
+.top-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+}
+
+.top-links a:hover {
+    background-color: rgb(93,14,15);
+}
+
+/* Header */
+.header {
+    background: #000;
+    color: white;
+    padding: 20px 0;
+}
+
+.header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 251px;
+    height: 50px;
+    background: url(https://placehold.co/251x50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.college-title {
+    font-size: 28px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+/* Main navigation */
+.main-nav {
+    background: var(--garnet-color);
+    padding: 15px 0;
+}
+
+.main-nav .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Hero section */
+.hero {
+    position: relative;
+    height: 70vh;
+    background: url(https://placehold.co/1253x600);
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.7) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.7);
+    color: var(--garnet-color);
+    padding: 30px 50px;
+    margin-bottom: 70px;
+    max-width: 900px;
+}
+
+.hero-title {
+    font-size: 36px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Main content sections */
+.intro-section {
+    padding: 60px 0;
+    text-align: left;
+    background: rgb(248, 248, 248);
+}
+
+.intro-text {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1.8;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: var(--black-color)
+}
+
+/* Split sections */
+.split-section {
+    display: flex;
+    min-height: 500px;
+}
+
+.split-content {
+    flex: 1;
+    padding: 200px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.split-image {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+}
+
+.prepared-section .split-content {
+    background: var(--garnet-color);
+    color: white;
+}
+
+.prepared-section .split-image {
+    background-image: url(https://placehold.co/626x501);
+}
+
+.section-title {
+    font-size: 50px;
+    margin-bottom: -80px;
+    padding: 50px;
+    font-weight: bold;
+}
+
+.section-text {
+    font-size: 17px;
+    padding: 50px;
+    line-height: 1.7;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+.btn-white {
+    color: white;
+    background-color: var(--black-color);
+    max-width: 200px;
+    display: inline-block;
+    border: 2px solid white;
+    padding: 20px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    margin-left: 50px;
+}
+
+.btn-white:hover {
+    background: white;
+    color: var(--garnet-color);
+}
+
+/* Find a Program section */
+.find-program {
+    padding: 60px 0;
+    text-align: center;
+    background: rgb(237, 237, 237);
+}
+
+.find-program .section-title {
+    color: var(--garnet-color);
+}
+
+.find-program .section-text {
+    text-align:center;
+    color: var(--black-color);
+    max-width: 800px;
+    margin: 0 auto 40px; 
+}
+
+.program-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.program-nav a {
+    background: var(--garnet-color);
+    color: white;
+    border: 2px solid white;
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.program-nav a:hover {
+    background: white;
+    color: var(--garnet-color);
+}
+
+/* Impact section */
+.impact-section {
+    position: relative;
+    background: url(https://placehold.co/1253x800);   
+    align-items: center;
+    width: auto;
+    height: 800px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.impact-content {
+    background: var(--black-color);
+    color: white;
+    padding: 50px 70px;  
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: 90px;
+    text-align: left;
+    position: relative;  
+    right: 15%;
+    top: 10%;
+}
+
+.impact-content .section-title {
+    font-size: 40px;
+    margin-bottom: -80px;
+    font-weight: bold;
+    width: fit-content;
+}
+
+.impact-content .section-text {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    opacity: 0.95;
+}
+
+.btn {
+    background: var(--garnet-color);
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    max-width: 180px;  
+    display: inline-block;
+    text-align: center; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+   background: white;
+    color: var(--garnet-color);
+}
+
+/* Quote section */
+.quote-section {
+    background: var(--garnet-color);
+    color: white;
+    padding: 100px 0;
+    position: relative;
+}
+
+.quote-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.quote-image {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: url(https://placehold.co/351x351);
+    flex-shrink: 0;
+}
+
+.quote-content {
+    flex: 1;
+}
+
+.quote-text {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.quote-attribution {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Network section */
+.network-section {
+    display: flex;
+    min-height: 500px;
+}
+
+.network-content {
+    flex: 1;
+    background: rgb(39, 63, 76);
+    color: white;
+    padding: 200px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.network-image {
+    flex: 1;
+    background: url(https://placehold.co/626x501);
+    background-size: cover;
+    background-position: center;
+}
+
+.network-content .section-title {
+    font-size: 50px;
+    margin-bottom: -100px;
+    padding: 70px;
+    font-weight: bold;
+    max-width: 700px;
+}
+
+.network-content .section-text {
+    padding: 70px;
+}
+
+.btn-c {
+   background: var(--garnet-color);
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    max-width: 180px;  
+    display: inline-block;
+    text-align: center; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    margin-left: 70px;
+}
+
+.btn-c:hover {
+   background: white;
+    color: var(--garnet-color);
+}
+
+/* News section */
+.news-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.news-title {
+    text-align: center;
+    font-size: 50px;
+    color: var(--garnet-color);
+    margin-bottom: 60px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.news-item {
+    display: flex;
+    flex-direction: column;  
+    justify-content: space-between; 
+    background: #fff;         
+}
+
+.news-item img {
+    width: 312px;
+    height: 312px;
+    object-fit: cover;
+}
+
+.news-item-content {
+   display: flex;
+    flex-direction: column;
+    flex-grow: 1;          
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.news-item h3 {
+    color: var(--garnet-color);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.news-item p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: var(--black-color);
+}
+
+.btn-n {
+    background: var(--garnet-color);
+    color: white;
+    border: 2px solid white;
+    width: 300px;
+    align-self: flex-start;
+    padding: 15px 0px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-n:hover {
+   background: white;
+    color: var(--garnet-color);
+}
+
+/* Final Section */
+.final-section {
+    display: flex;
+    min-height: 70vh;
+}
+
+.final-content {
+    flex: 1;
+    background-color: var(--black-color);
+    color: white;
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.final-content h2 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+.final-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.final-image {
+    flex: 1;
+    background: url(https://placehold.co/553x695);    
+    position: relative;
+}
+
+.links {
+  padding: 60px 70px;
+  max-width: 900px;
+  text-align: left;
+}
+
+.final-actions {
+  display: flex;
+  align-items: center; 
+  gap: 30px;            
+  margin-top: 20px;
+}
+
+.btn-m {
+  background: var(--black-color);
+  color: white;
+  border: 2px solid white;
+  padding: 15px 25px;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: all 0.3s;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-m:hover {
+    background: white;
+    color: var(--garnet-color);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--garnet-color);
+    color: white;
+    padding: 60px 0 0px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-section h3 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold; 
+    text-transform: uppercase; 
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    background-color: rgb(188, 61, 69);
+}
+
+.link-columns {
+    display: flex;
+    gap: 40px; 
+}
+
+.footer-bottom {
+    background-color: var(--black-color); 
+    border-top: 2px solid white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .main-nav .container {
+        justify-content: center;
+    }
+
+    .nav-links {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        padding: 10px, 0;
+    }
+
+    .hero-content {
+        margin: 20px;
+        padding: 20px 30px;
+    }
+
+    .hero-title {
+        font-size: 24px;
+    }
+
+    .split-section {
+        flex-direction: column;
+    }
+
+    .split-content {
+        padding: 40px 30px;
+    }
+
+    .quote-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .network-section {
+        flex-direction: column;
+    }
+
+    .program-nav {
+        flex-direction: column;
+        align-items: center;
+    }          
+}
