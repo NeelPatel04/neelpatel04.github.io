@@ -131,10 +131,6 @@ body {
     transition: width 0.3s;
 }
 
-.nav-links a:hover::after {
-    width: 100%;
-}
-
 /* Hero section */
 .hero {
     position: relative;
@@ -311,13 +307,13 @@ body {
 .impact-content {
     background: var(--black-color);
     color: white;
-    padding: 50px 70px;  
+    padding: 30px 40px;  
     max-width: 800px;
     margin-left: auto;
     margin-right: 90px;
     text-align: left;
     position: relative;  
-    right: 15%;
+    right: 8%;
     top: 10%;
 }
 
@@ -326,12 +322,13 @@ body {
     margin-bottom: -80px;
     font-weight: bold;
     width: fit-content;
+    margin-top: -30px;
 }
 
 .impact-content .section-text {
     font-size: 17px;
     line-height: 1.6;
-    margin-bottom: 40px;
+    margin-bottom: -20px;
     opacity: 0.95;
 }
 
