@@ -1,0 +1,409 @@
+/* Main Tabs */
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+}
+
+.header img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.nav {
+    background-color: #5c5c5c;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+.nav a {
+    margin: 0 35px;
+    text-decoration: none;
+    color: white;
+    padding: 0 10px; 
+    display: inline-block;
+    position: relative;
+
+}
+
+.nav a + a::before {
+    content: "|";
+    position: absolute;
+    left: -35px;
+    color: white;
+}
+
+.login {
+    margin-left: 10px;
+}
+
+.login a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/* Home Page */
+.banner {
+    width: 100%;
+    height: 200px;
+    background-color: #ccc;
+}
+
+.content {
+    padding: 20px;
+}
+
+.featured {
+    display: flex;
+    justify-content: space-between;
+}
+
+.destination {
+    width: 30%;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.destination img {
+    width: 100%;
+    height: 150px;
+    background-color: #ccc;
+}
+
+.destination a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+/* Destination Page */
+.container {
+    display: flex;
+    padding: 20px;
+}
+.sidebar {
+    width: 20%;
+    background-color: #e9ecef;
+    padding: 10px;
+    margin-right: 20px;
+}
+.sidebar h3 {
+    margin-top: 0;
+}
+.sidebar select {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+.sidebar button {
+    width: 100%;
+    padding: 5px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.main-content {
+    width: 80%;
+}
+.destination-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.destination {
+    width: calc(33.33% - 13.33px);
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.destination img {
+    width: 100%;
+    height: 150px;
+    background-color: #ccc;
+}
+.destination a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: red;
+}
+
+/* Travel Blog */
+.blog {
+    padding: 20px;
+}
+
+.blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.blog-post {
+    flex: 0 0 calc(50% - 10px);
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.blog-post img {
+    width: 100%;
+    height: 200px;
+    background-color: #ccc;
+}
+
+.blog-post h3 {
+    margin: 10px 0;
+}
+
+.blog-post p {
+    margin: 5px 0;
+}
+
+.blog-post .author {
+    font-style: italic;
+    color: #6c757d;
+    text-align: right;
+}
+
+.load-more {
+    display: block;
+    margin-top: 30px;
+    text-align: left;
+    text-decoration: none;
+    color: red;
+    font-size: 1.1em;
+}
+
+/* Bucket-List */
+.bucket {
+    padding: 20px;
+}
+.bucket-list {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    width: 100%;
+}
+.bucket-list th, .bucket-list td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+.bucket-list th {
+    background-color: white;
+}
+.bucket-list img {
+    width: 150px;
+    height: 100px;
+    background-color: #ccc;
+}
+.bucket-list .actions-p button {
+    padding: 5px 20px;
+    margin: 0 5px;
+    border: 1px solid black;
+    background: none;
+    cursor: pointer;
+}
+
+/* About */
+.about {
+    padding: 20px;
+}
+
+.about-section {
+    margin-top: 20px;
+}
+
+.mission-statement {
+    display: flex;
+    align-items: center;
+}
+
+.mission-statement p {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.mission-statement img {
+    width: 300px;
+    height: 200px;
+    background-color: #ccc;
+}
+
+.why-choose {
+    margin-top: 20px;
+}
+
+.why-choose ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+
+.why-choose li {
+    flex: 1;
+    margin-right: 20px;
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+.contact {
+    margin-top: 20px;
+}
+
+/* Preview Page */
+.preview {
+    width: 100%;
+    overflow-x: hidden;
+}
+.destination-p {
+    margin-top: 20px;
+    padding: 20px;
+    width: auto;
+}
+.destination-p img {
+    width: 500px;
+    height: 300px;
+    background-color: #ccc;
+    border: 2px solid black;
+    display: block;
+    margin: 0 auto;
+}
+.destination-p h2 {
+    margin: 10px 0;
+}
+
+.destination-p h3 {
+    text-align: left;
+}
+
+.destination-p p {
+    margin: 10px 0;
+    text-align: left;
+}
+.destination-p ul {
+    list-style-type: disc;
+    display: block;
+    width: 100%;
+}
+.destination-p ul li {
+    text-align: left;
+}
+
+.actions-p {
+    margin-top: 20px;
+    text-align: center;
+}
+.actions-p button {
+    padding: 5px 10px;
+    margin: 0 10px;
+    border: 1px solid #000;
+    background: none;
+    cursor: pointer;
+}
+.destination-p .cost {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Header */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav {
+        margin: 10px 0 0 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav a {
+        display: block;
+        margin: 5px 0;
+    }
+    .login {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    /* Home Featured Destinations */
+    .featured {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .destination {
+        width: 100%;
+    }
+
+    /* Destination Page */
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .destination-grid {
+        flex-direction: column;
+    }
+
+    .destination {
+        width: 100%;
+    }
+
+    /* Bucket-List */
+    .bucket-list {
+        display: block;
+        overflow-x: auto;
+    }
+
+    /* About Page */
+    .mission-statement {
+        flex-direction: column;
+    }
+
+    .mission-statement p {
+        margin: 0 0 20px 0;
+    }
+
+    .why-choose ul {
+        flex-direction: column;
+    }
+
+    .why-choose li {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
