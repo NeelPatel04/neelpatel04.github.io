@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #6393A6;
+    color: #333;
+    line-height: 1.6;
+}
+
+.header {
+    background-color: #6393A6;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: #2C4001;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.header h2 {
+    color: #5A7302;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* Navigation Styles */
+.nav-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.nav-desktop {
+    display: inline-block;
+}
+
+.nav-desktop ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-desktop li {
+    position: relative;
+}
+
+.nav-desktop li:not(:last-child)::after {
+    content: '|';
+    position: center;
+    right: 0;
+    color: black;
+    top: 50%;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: #465902;
+    font-weight: bold;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.nav-btn:hover {
+    color: #2C4001;
+}
+
+/* Mobile Navigation */
+.nav-mobile {
+    display: none;
+    position: relative;
+    text-align: left;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #465902;
+    cursor: pointer;
+    display: flex;
+    margin-left:20px ;
+}
+
+.menu-toggle.active .arrow {
+    transform: rotate(180deg);
+}
+
+.mobile-menu {
+    display: none;
+    border-radius: 8px;
+}
+
+.mobile-menu.show {
+    display: block;
+}
+
+.mobile-menu ul {
+    list-style: none;
+}
+
+.mobile-menu li {
+    padding: 10px;
+}
+
+.mobile-nav-btn:hover {
+    background-color: #d0e8f0;
+}
+
+/* Main Content */
+.main-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.exercise-section {
+    display: none;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.exercise-section.active {
+    display: block;
+}
+
+.exercise-section h3 {
+    color: #1B5359;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Planting Section */
+.plant-question {
+    color: #1B5359;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.range-container {
+    margin-bottom: 30px;
+}
+
+.range-slider {
+    width: 100%;
+    max-width: 400px;
+    height: 8px;
+    border-radius: 5px;
+    outline: none;
+    margin: 20px 0;
+    -webkit-appearance: none;
+    appearance: none;
+    background: linear-gradient(to right, #1B5359 0%, #1B5359 var(--fill, 1%), #e0e0e0 var(--fill, 1%), #e0e0e0 100%);
+}
+
+.plant-result {
+    margin-top: 30px;
+}
+
+.plant-image {
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+    display: block;
+}
+
+.plant-message {
+    color: #465902;
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.plant-status {
+    color: #5A7302;
+    font-size: 0.9rem;
+}
+
+/* Digital Clock Section */
+.clock-time {
+    font-size: 2rem;
+    color: #5A7302;
+    font-weight: bold;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    color: #592F16;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .nav-desktop {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: block;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header h2 {
+        font-size: 1.4rem;
+    }
+
+    .exercise-section {
+        padding: 20px;
+    }
+}
