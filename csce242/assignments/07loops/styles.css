@@ -1,0 +1,144 @@
+body {
+    background-color: lightblue;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.5s;
+}
+
+.header {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: navy;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.header h2 {
+    color: orangered;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+#canvas {
+  width: 800px;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Cloud CSS Art - Adapted from ChatGPT */
+.cloud {
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  background: #fff;
+  border-radius: 100px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.cloud::before,
+.cloud::after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.cloud::before {
+  width: 60px;
+  height: 60px;
+  top: -30px;
+  left: 20px;
+}
+
+.cloud::after {
+  width: 40px;
+  height: 40px;
+  top: -20px;
+  left: 60px;
+}
+
+/* Tree CSS Art - Adapted from ChatGPT */
+.tree {
+  position: absolute;
+  width: 12px;
+  height: 40px;
+  background: linear-gradient(to right, #654321, #8B4513, #654321);
+  bottom: 50px;
+  border-radius: 0 0 3px 3px;
+}
+
+.tree::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 50px solid #228B22;
+  top: -45px;
+  left: -24px;
+}
+
+.tree::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 35px solid #32CD32;
+  top: -30px;
+  left: -14px;
+  z-index: 1;
+}
+
+/* Sun and Moon CSS Art - Adapted from ChatGPT */
+.sun {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  background: #FFD700;
+  border-radius: 50%;
+  top: 80px;
+  right: 20px;
+  box-shadow: 0 0 20px #FFA500;
+  z-index: 1000;
+}
+
+.moon {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  background: #C0C0C0;
+  border-radius: 50%;
+  top: 80px;
+  right: 20px;
+  box-shadow: 0 0 20px #A9A9A9;
+  z-index: 1000;
+}
+
+.moon::before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #A9A9A9;
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+}
+
+button {
+  margin: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
