@@ -25,4 +25,63 @@ document.getElementById("btn-count").onclick = () => {
         error.innerHTML = "* The second number must be bigger than the first";
         return;
     }
+
+    //Loop for every number from start to end display the number in paragraphs
+    for(let i=startNum; i <= endNum; i++){
+        const p = document.createElement("p");
+        p.innerHTML = i;
+        resultDiv.append(p);
+        p.onclick = () => {
+            console.log(`You clicked Number ${i}`);
+        };
+    }   
+};
+
+document.getElementById("btn-show-toys").onclick = () => {
+    const toyList = document.getElementById("toy-list");
+    toyList.innerHTML = "";
+
+    const toys = ["ball", "skipping rope", "doll", "mini car", "elmo"];
+
+    /* First way to iterate */
+    //interate over toys all li's to the ul
+    /*for(let i = 0; i < toys.length; i++) {
+        const li = document.createElement("li");
+        li.innerHTML = toys[i];
+        toyList.append(li);
+    }*/
+
+    /* Second way preferred */
+    toys.forEach((toy, i)=> {
+        console.log(i + ". " + toy);
+        const li = document.createElement("li");
+        li.innerHTML = toy;
+        toyList.append(li);
+    });
+}
+
+document.getElementById("btn-show-toy-prices").onclick = () => {
+    const toys = [];
+    toys["ball"] = 2.99;
+    toys["barbie"] = 19.99;
+    toys["skipping rope"] = 1.98;
+    toys["match box car"] = 2.54;
+
+    const toyDiv = document.getElementById("toy-prices");
+    toyDiv.innerHTML = "";
+
+    const priceP = document.getElementById("price-p");
+    priceP.innerHTML = "";
+
+    for(let toy in toys){
+        const p = document.createElement("p");
+        p.innerHTML = toy;
+        toyDiv.append(p);
+
+        //when I click the paragraph... in a div below show the price
+        //LIke "Ball costs $..."
+        p.onclick = () => {
+            priceP.innerHTML = `${toy} costs $${toys[toy]}.`
+        };
+    }
 };
