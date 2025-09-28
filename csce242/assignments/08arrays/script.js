@@ -11,7 +11,6 @@ const beforeImages = {
       "Hummer": "images/newHummer.jpg"
     };
 
-
 window.onload = function() {
   const gallery = document.getElementById('gallery');
   for (let car in beforeImages) {
@@ -30,7 +29,6 @@ window.onload = function() {
     gallery.appendChild(wrapper);
   }
 };
-
 
 document.addEventListener('click', function(e) {
   if (e.target.className === 'car-img') {
