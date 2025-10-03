@@ -91,8 +91,8 @@ main {
     color:red;
 }
 
-.input {
-    max-width: 100%;
+input {
+    max-width:100%;
 }
 
 .sub-section a {
@@ -150,7 +150,7 @@ main {
     height:200px;
     margin-right:10%;
     border:2px solid var(--primary-color);
-    background:linear-gradient(0deg, red 0% 20%, orange 30% 40%, green 50% 70%, blue 75% 100%);
+    background:linear-gradient(0deg, red 0% var(--donation-percent), white var(--donation-percent) 100%);
 }
 
 .error {
@@ -246,20 +246,20 @@ footer p {
 }
 
 .clicked {
-    background: magenta;
-    color: white;
+    background:magenta;
+    color:white;
 }
 
 .happy {
-    background: yellow;
-    color: black;
-    border: 2px dotted orange;
+    background:yellow;
+    color:blak;
+    border:2px dotted orange;
 }
 
 .sad {
-    background: navy;
-    color: white;
-    border: 2px solid skyblue;
+    background:navy;
+    color:white;
+    border:2px solid skyblue;
 }
 
 #map {
@@ -267,9 +267,28 @@ footer p {
     height:500px;
 }
 
+/* Dogs */
+
+.dog {
+  background-color: dodgerblue;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px;
+  color: white;
+  width:40%;
+}
+
+.dog img {
+    max-width:50%;
+}
+
+.transparent {
+    visibility:hidden;
+}
+
 
 /* Medium screens */
-@media only screen and (min-width: 800px) { 
+@media only screen and (min-width: 700px) { 
     .columns {
         display:flex;
     }
@@ -309,6 +328,11 @@ footer p {
         border-radius: 5px;
         margin:5px;
     }
+
+    #dog-list {
+    display: flex;
+  }
+  
 }
 
 
@@ -364,10 +388,6 @@ footer p {
         width:18%;
         padding:10px;
         margin:0;
-    }
-
-    .hidden {
-        display: none;
     }
 
     .hide-small {
