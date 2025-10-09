@@ -17,9 +17,9 @@ const showShoes = async() => {
     shoes.forEach((shoe)=>{
         //make a section for each shoe put all the data in, nicely formatted
         //then append it to the shoe list
-        const section = document.getElementById("section");
-        section.classList.add("section");
-        
+        const section = document.createElement("section");
+        section.classList.add("shoe");
+
         //heading
         const h3 = document.createElement("h3");
         section.append(h3);
@@ -48,4 +48,5 @@ const showShoes = async() => {
         shoeListDiv.append(section);
     });
 };
+
 showShoes();

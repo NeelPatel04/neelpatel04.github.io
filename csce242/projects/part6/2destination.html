@@ -1,82 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>TrekTales</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div class="header">
-            <div class="header-left">
-                <img src="images/logo.png" alt="Logo">
-                <h1>TrekTales</h1>
-            </div>
-            <div class="nav">
-                <a href="1home.html">Home</a>
-                <a href="2destination.html">Destination</a>
-                <a href="3travelblog.html">Travel Blog</a>
-                <a href="4bucketlist.html">Bucket-List</a>
-                <a href="5about.html">About</a>
-            </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="login">
-                <a href="#">Login</a>
-            </div>
-            <div class="mobile-menu" id="mobileMenu">
-                <a href="1home.html">Home</a>
-                <a href="2destination.html">Destination</a>
-                <a href="3travelblog.html">Travel Blog</a>
-                <a href="4bucketlist.html">Bucket-List</a>
-                <a href="5about.html">About</a>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <title>TrekTales — Destinations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <img src="images/logo.png" alt="Logo">
+            <h1>TrekTales</h1>
         </div>
-        <div class="container">
+
+        <div class="nav">
+            <a href="1home.html">Home</a>
+            <a href="2destination.html">Destination</a>
+            <a href="3travelblog.html">Travel Blog</a>
+            <a href="4bucketlist.html">Bucket-List</a>
+            <a href="5about.html">About</a>
+        </div>
+
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="login">
+            <a href="#">Login</a>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="1home.html">Home</a>
+            <a href="2destination.html">Destination</a>
+            <a href="3travelblog.html">Travel Blog</a>
+            <a href="4bucketlist.html">Bucket-List</a>
+            <a href="5about.html">About</a>
+        </div>
+    </div>
+
+    <div class="container">
         <div class="sidebar">
             <h3>Filters</h3>
-            <select>
-                <option>Country</option>
-            </select>
-            <select>
-                <option>Month</option>
-            </select>
-            <select>
-                <option>Climate</option>
-            </select>
-            <select>
-                <option>Bookings</option>
-            </select>
-            <select>
-                <option>Types</option>
-            </select>
+            <select><option>Country</option></select>
+            <select><option>Month</option></select>
+            <select><option>Climate</option></select>
+            <select><option>Bookings</option></select>
+            <select><option>Types</option></select>
             <button>Save</button>
         </div>
+
         <div class="main-content">
             <h2>Destination Grid</h2>
-            <div class="destination-grid">
-                <div class="destination">
-                    <img src="images/tokyo.jpg" alt="Tokyo, Japan">
-                    <p><b>Tokyo, Japan:</b><br>Experience Tokyo's electrifying fusion of ancient tradition and futuristic innovation. From serene Sensoji Temple to neon-lit Shibuya Crossing, savor worldclass sushi, explore hidden alleyway izakayas, and discover cherry blossom magic in this vibrant metropolis.</p>
-                    <a href="#">View Details</a>
-                </div>
-                <div class="destination">
-                    <img src="images/paris.jpg" alt="Paris, France">
-                    <p><b>Paris, France:</b><br>Experience the City of Light's timeless romance with Eiffel Tower sunsets, Seine River cruises, and charming Montmartre streets. Savor buttery croissants at hidden patisseries, explore the Louvre's masterpieces, and fall in love with Parisian elegance and joie de vivre.</p>
-                    <a href="#">View Details</a>
-                </div>
-                <div class="destination">
-                    <img src="images/beijing.jpg" alt="Beijing, China">
-                    <p><b>Beijing, China:</b><br>Discover Beijing's majestic blend of ancient imperial grandeur and modern dynamism. Walk the Great Wall's winding battlements, explore the Forbidden City's crimson palaces, savor Peking duck in hidden hutongs, and experience China's rich cultural heartbeat in this historic capital.</p>
-                    <a href="#">View Details</a>
-                </div>
-                <div class="destination">
-                    <img src="images/rome.jpg" alt="Rome, Italy">
-                    <p><b>Rome, Italy:</b><br>Experience Eternal Rome's timeless splendor where ancient gladiators battled in the Colosseum and emperors ruled from Palatine Hill. Toss coins in Trevi Fountain, savor authentic carbonara in Trastevere alleys, and discover where history was made in this romantic Italian capital.</p>
-                    <a href="#">View Details</a>
-                </div>
-            </div>
-            <script src="script.js"></script>
-    </body>
+            <div id="destinationGrid" class="destination-grid"></div>
+        </div>
+    </div>
+    <script src="json/info.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>
