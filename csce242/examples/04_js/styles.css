@@ -66,8 +66,31 @@ main {
 }
 
 /* Slideshow */
+#slideshow {
+    position: relative;
+}
+
 #slideshow img {
     max-width:100%;
+}
+
+#arrow-prev, #arrow-next {
+    position: absolute;
+    background: rgb(255, 255, 255, 0.7);
+    color: black;
+    text-decoration: none;
+    font-size: 3em;
+    top: 40%;
+    padding: 10px;
+}
+
+#arrow-prev {
+    left: 5%;
+
+}
+
+#arrow-next {
+    right: 5%;
 }
 
 .links {
@@ -320,6 +343,10 @@ footer p {
     }
     #shoes-section section {
         max-width:100% !important;
+    }
+
+    #breweries {
+        flex-wrap: wrap;
     }
 
     .brewery {
