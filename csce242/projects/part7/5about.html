@@ -49,13 +49,56 @@
                     <li>24/7 expert support for peace of mind - from flight delays to itinerary changes, we've got your back so you can focus on the adventure.</li>
                 </ul>
             </div>
-            <h3>Contact US:</h3>
+            <h3>Contact Us:</h3>
             <div class="contact">
                 <p>Email: info@trektales.com</p>
                 <p>Phone: (123)-456-7890</p>
             </div>
+            <section class="contact-section">
+    <div class="contact-form-wrapper">
+        <div class="contact-intro">
+            <h2 class="contact-title">Get in Touch</h2>
+            <p class="contact-description">
+                Fill out the form below and we'll get back to you as soon as possible.
+            </p>
+        </div>
+
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Result message div - ADDED -->
+            <div id="result" class="contact-result" style="display: none;"></div>
+
+            <input type="hidden" name="access_key" value="43f6b40c-c6ae-4358-9b35-50ea1ecfa302" />
+            <input type="hidden" name="subject" value="New Contact Form Submission from TrekTales" />
+            <input type="hidden" name="from_name" value="TrekTales Website" />
+
+            <div class="form-group-container">
+                <div class="form-group">
+                    <label for="name" class="form-label">Name</label>
+                    <input id="name" name="name" class="form-input" placeholder="Your name" type="text" required />
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input id="email" name="email" class="form-input" placeholder="Your email" type="email" required />
+                </div>
+                <div class="form-group">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-textarea" id="message" name="message" placeholder="Your message" required></textarea>
+                </div>
+            </div>
+            <button class="form-submit" type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <div class="contact-map-wrapper">
+        <h3>Our Location</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31909.666489560375!2d103.96623370405534!3d1.35155716267923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da17d693d0cde3%3A0xd6d6dd5e414e4503!2sSingapore%20Changi%20Airport!5e0!3m2!1sen!2sus!4v1760668659880!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</section>
+            
+
         </div>
     </div>
     <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
     </body>
 </html>
